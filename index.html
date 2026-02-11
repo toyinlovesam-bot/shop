@@ -6,150 +6,505 @@
   <title>Mosquito Killer Lamp - Bug-Free Nights in Nigeria</title>
   <meta name="description" content="Portable USB rechargeable mosquito killer lamp. Fast delivery to Lagos, Abuja, Akwa Ibom, Ogun & Port Harcourt."/>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <header>
-    <h1>Say Goodbye to Mosquitoes Forever!</h1>
-    <p>Powerful UV zapper – silent, safe, rechargeable. Fast delivery to:</p>
-    <div class="states-list">
-      <span>Lagos</span><span>Abuja</span><span>Akwa Ibom</span><span>Ogun</span><span>Port Harcourt</span>
+  <!-- Sticky Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">
+        <i class="fas fa-bug"></i>
+        <span>Mosquito<span class="logo-highlight">Guard</span>NG</span>
+      </div>
+      <div class="header-cta">
+        <span class="header-price">₦35,000</span>
+        <button class="header-btn" onclick="scrollToOrder()">Order Now</button>
+      </div>
     </div>
-    <img src="images/hero-lamp.jpg" alt="Mosquito Killer Lamp" class="hero-image">
-    <p>Protect your family from bites and diseases – no chemicals needed!</p>
-    <button class="cta" onclick="document.getElementById('orderFormSection').scrollIntoView({behavior:'smooth'})">Order Now – ₦35,000</button>
   </header>
 
-  <div class="container">
-
-    <section class="price-section">
-      <h2>Limited Time Flash Sale – Stocks Running Low!</h2>
-      <p class="old-price">₦45,000</p>
-      <p class="new-price">₦35,000 <span class="save">SAVE ₦10,000 (22% OFF)</span></p>
-
-      <label for="quantity">Select Quantity:</label>
-      <select id="quantity">
-        <option value="1">1 Lamp – ₦35,000</option>
-        <option value="2">2 Lamps – ₦68,000 (Save ₦2,000)</option>
-        <option value="3">3 Lamps – ₦99,000 (Save ₦6,000 – Best Deal!)</option>
-      </select>
-
-      <p id="total-price" class="total-display">Total: ₦35,000</p>
-    </section>
-
-    <section class="urgency">
-      <h3>Offer Ends In:</h3>
-      <div id="countdown">
-        <span id="hours">24</span>h : <span id="minutes">00</span>m : <span id="seconds">00</span>s
-      </div>
-    </section>
-
-    <section class="features">
-      <h2>Why Nigerians Love This Mosquito Killer Lamp</h2>
-      <ul>
-        <li>4000mAh Rechargeable Battery – Up to 10-15 hours of protection</li>
-        <li>UV Light + Electric Grid – Attracts & instantly zaps mosquitoes, flies, moths</li>
-        <li>Silent & Radiationless – Safe for kids, babies & pets</li>
-        <li>Covers 50–120㎡ – Perfect for bedroom, living room, backyard or camping</li>
-        <li>USB Charging + Portable Handle – Easy to use anywhere</li>
-        <li>IP54 Water-Resistant – Great for outdoor use in humid Nigerian weather</li>
-      </ul>
-    </section>
-
-    <section class="image-grid">
-      <h2>See It in Action</h2>
-      <div class="grid-container">
-        <img src="images/closeup.jpg" alt="Product Close-up">
-        <img src="images/zapping.jpg" alt="Zapping Mosquitoes">
-        <img src="images/outdoor.jpg" alt="Outdoor Use">
-        <img src="images/hero-lamp.jpg" alt="Lifestyle Use">
-      </div>
-    </section>
-
-    <section class="testimonials">
-      <h2>What Customers Are Saying</h2>
-      <blockquote>"No more sleepless nights in Lagos! This lamp is a game changer." – Toyin, Ikeja</blockquote>
-      <blockquote>"Fast delivery to Abuja and it works perfectly. Highly recommend!" – Ahmed, Maitama</blockquote>
-      <blockquote>"Great for our compound in Port Harcourt – silent and effective." – Ngozi, GRA</blockquote>
-    </section>
-
-    <section class="faq">
-      <h2>Frequently Asked Questions</h2>
-      
-      <details>
-        <summary>Is this mosquito killer lamp safe for children and pets?</summary>
-        <p>Yes – it is completely radiationless, chemical-free, and produces no harmful fumes or odors. It uses only UV light to attract insects and a high-voltage grid to zap them. Keep it out of reach of very young children who might touch the grid when it's on.</p>
-      </details>
-
-      <details>
-        <summary>How long does the battery last on a full charge?</summary>
-        <p>The built-in 4000mAh battery lasts 10–15 hours depending on usage mode (continuous vs. intermittent). You can recharge it via any USB charger or power bank.</p>
-      </details>
-
-      <details>
-        <summary>Does it really work in Nigeria's humid weather?</summary>
-        <p>Yes – it has IP54 water-resistant rating, so it handles humidity, light rain, and outdoor use well. Many customers use it successfully in backyards and compounds across Lagos, Port Harcourt, and other humid areas.</p>
-      </details>
-
-      <details>
-        <summary>Which areas do you deliver to?</summary>
-        <p>We currently offer fast delivery (2–5 days) to: Lagos, Abuja (FCT), Akwa Ibom, Ogun, and Port Harcourt (Rivers State). We plan to expand soon!</p>
-      </details>
-
-      <details>
-        <summary>Is there a warranty or return policy?</summary>
-        <p>Yes – 7-day money-back guarantee if the product is faulty or doesn't work as described. We also offer 6-month warranty against manufacturing defects. Contact us via WhatsApp after delivery if any issue arises.</p>
-      </details>
-
-      <details>
-        <summary>How do I clean the dead insects?</summary>
-        <p>It has a removable tray at the bottom. Simply open it, empty the dead bugs, and wipe with a dry cloth. No water needed for the grid part.</p>
-      </details>
-
-      <details>
-        <summary>Can I use it during power outage?</summary>
-        <p>Absolutely – it's battery-powered and doesn't need constant electricity once charged. Perfect for areas with frequent NEPA issues.</p>
-      </details>
-    </section>
-
-    <section class="order-form" id="orderFormSection">
-      <h2>Place Your Order Now – Delivery in 2-5 Days</h2>
-      <form id="orderForm">
-        <input type="text" id="name" placeholder="Full Name" required>
-        <input type="tel" id="phone" placeholder="Phone Number (WhatsApp preferred)" required>
-        <input type="text" id="address" placeholder="Full Delivery Address" required>
-
-        <label for="state">Delivery State:</label>
-        <select id="state" required>
-          <option value="">Select State</option>
-          <option value="Lagos">Lagos</option>
-          <option value="Abuja">Abuja (FCT)</option>
-          <option value="Akwa Ibom">Akwa Ibom</option>
-          <option value="Ogun">Ogun</option>
-          <option value="Port Harcourt">Port Harcourt (Rivers)</option>
-        </select>
-
-        <label for="quantity">Quantity:</label>
-        <select id="quantity" required>
-          <option value="1">1 Lamp – ₦35,000</option>
-          <option value="2">2 Lamps – ₦68,000 (Save ₦2,000)</option>
-          <option value="3">3 Lamps – ₦99,000 (Save ₦6,000)</option>
-        </select>
-
-        <p id="total-price-form" class="total-display">Total: ₦35,000</p>
-
-        <button type="submit" class="cta">Submit Order → Get Confirmation on Telegram</button>
-      </form>
-      <p id="status"></p>
-      <p class="shipping-note">
-        Shipping fee added at confirmation (varies by state). We only deliver to the selected states currently.
-      </p>
-    </section>
-
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-sticky-cta" onclick="scrollToOrder()">
+    <span class="sticky-price">₦35,000</span>
+    <span class="sticky-text">Order Now <i class="fas fa-arrow-right"></i></span>
   </div>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="badge">🔥 LIMITED TIME OFFER</span>
+          <h1>Say Goodbye to Mosquitoes <span class="highlight">Forever!</span></h1>
+          <p class="hero-subtitle">Powerful UV zapper – silent, safe, rechargeable. Fast delivery across Nigeria</p>
+          
+          <div class="states-list">
+            <div class="state-tag"><i class="fas fa-map-marker-alt"></i> Lagos</div>
+            <div class="state-tag"><i class="fas fa-map-marker-alt"></i> Abuja</div>
+            <div class="state-tag"><i class="fas fa-map-marker-alt"></i> Akwa Ibom</div>
+            <div class="state-tag"><i class="fas fa-map-marker-alt"></i> Ogun</div>
+            <div class="state-tag"><i class="fas fa-map-marker-alt"></i> Port Harcourt</div>
+          </div>
+          
+          <div class="hero-features">
+            <div class="feature"><i class="fas fa-bolt"></i> Instant Zapping</div>
+            <div class="feature"><i class="fas fa-battery-full"></i> 15 Hours Battery</div>
+            <div class="feature"><i class="fas fa-child"></i> Safe for Kids & Pets</div>
+            <div class="feature"><i class="fas fa-truck"></i> 2-5 Day Delivery</div>
+          </div>
+          
+          <div class="price-container">
+            <div class="price-box">
+              <div class="price-old">
+                <span class="old-price">₦45,000</span>
+                <span class="discount-badge">-22%</span>
+              </div>
+              <div class="price-new">₦35,000</div>
+              <div class="price-save">You save ₦10,000</div>
+            </div>
+            
+            <div class="urgency-box">
+              <div class="urgency-title"><i class="fas fa-clock"></i> Offer Ends In:</div>
+              <div id="countdown" class="countdown">
+                <div class="countdown-item">
+                  <span id="hours">24</span>
+                  <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                  <span id="minutes">00</span>
+                  <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                  <span id="seconds">00</span>
+                  <div class="countdown-label">Seconds</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <button class="cta-btn pulse" onclick="scrollToOrder()">
+            <i class="fas fa-shopping-cart"></i> Order Now – ₦35,000
+          </button>
+          <p class="stock-warning"><i class="fas fa-exclamation-triangle"></i> Only 37 units left in stock!</p>
+        </div>
+        
+        <div class="hero-image">
+          <img src="images/hero-lamp.jpg" alt="Mosquito Killer Lamp" class="product-img">
+          <div class="image-badge">
+            <i class="fas fa-shield-alt"></i> 7-Day Money Back Guarantee
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Indicators -->
+  <section class="trust-indicators">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <i class="fas fa-shipping-fast"></i>
+          <div class="trust-text">Fast Delivery</div>
+          <div class="trust-sub">2-5 Days</div>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-shield-alt"></i>
+          <div class="trust-text">6-Month Warranty</div>
+          <div class="trust-sub">Quality Guaranteed</div>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-users"></i>
+          <div class="trust-text">2,500+ Happy Customers</div>
+          <div class="trust-sub">Across Nigeria</div>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-headset"></i>
+          <div class="trust-text">24/7 Support</div>
+          <div class="trust-sub">Via WhatsApp</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Features Section -->
+    <section class="features">
+      <h2>Why Nigerians <span class="highlight">Love</span> This Mosquito Killer Lamp</h2>
+      <p class="section-subtitle">Protect your family from bites and diseases – no chemicals needed!</p>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-battery-full"></i>
+          </div>
+          <h3>Long-Lasting Battery</h3>
+          <p>4000mAh rechargeable battery provides up to 10-15 hours of continuous protection.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-volume-mute"></i>
+          </div>
+          <h3>Silent Operation</h3>
+          <p>Works without noise – perfect for bedrooms. No buzzing sounds to disturb your sleep.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-virus"></i>
+          </div>
+          <h3>Chemical-Free</h3>
+          <p>No harmful chemicals, sprays or odors. Safe for children, babies and pets.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-sun"></i>
+          </div>
+          <h3>UV Attraction Technology</h3>
+          <p>Special UV light attracts mosquitoes, flies and moths from up to 20 meters away.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </div>
+          <h3>Wide Coverage</h3>
+          <p>Covers 50–120㎡ – perfect for bedroom, living room, backyard or camping.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-tint"></i>
+          </div>
+          <h3>Water-Resistant</h3>
+          <p>IP54 rated – handles Nigeria's humid weather, light rain and outdoor use.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Gallery -->
+    <section class="gallery">
+      <h2>See It in <span class="highlight">Action</span></h2>
+      <p class="section-subtitle">Visualize how it works in different Nigerian home settings</p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/closeup.jpg" alt="Product Close-up">
+          <div class="gallery-caption">High-Quality Build</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/zapping.jpg" alt="Zapping Mosquitoes">
+          <div class="gallery-caption">Instant Mosquito Elimination</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/outdoor.jpg" alt="Outdoor Use">
+          <div class="gallery-caption">Perfect for Outdoor Gatherings</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/hero-lamp.jpg" alt="Lifestyle Use">
+          <div class="gallery-caption">Bedroom Protection</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <h2>How It <span class="highlight">Works</span></h2>
+      
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Attracts</h3>
+            <p>UV light attracts mosquitoes and other flying insects</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Zaps</h3>
+            <p>High-voltage grid instantly eliminates insects on contact</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Protects</h3>
+            <p>Creates a mosquito-free zone for your family</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <h2>What Our <span class="highlight">Customers</span> Are Saying</h2>
+      <p class="section-subtitle">Real feedback from Nigerians across the country</p>
+      
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"No more sleepless nights in Lagos! This lamp is a game changer. My kids can now play outside without getting bitten."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Toyin, Ikeja</strong>
+              <span>Lagos State</span>
+            </div>
+            <div class="verified-badge"><i class="fas fa-check-circle"></i> Verified Purchase</div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Fast delivery to Abuja and it works perfectly. We've had zero mosquito bites since using it. Highly recommend!"</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Ahmed, Maitama</strong>
+              <span>Abuja FCT</span>
+            </div>
+            <div class="verified-badge"><i class="fas fa-check-circle"></i> Verified Purchase</div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="testimonial-text">"Great for our compound in Port Harcourt – silent and effective. Finally, we can enjoy evenings outside without mosquitoes."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Ngozi, GRA</strong>
+              <span>Port Harcourt</span>
+            </div>
+            <div class="verified-badge"><i class="fas fa-check-circle"></i> Verified Purchase</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2>Frequently Asked <span class="highlight">Questions</span></h2>
+      <p class="section-subtitle">Get answers to common questions about our mosquito killer lamp</p>
+      
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is this mosquito killer lamp safe for children and pets?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes – it is completely radiationless, chemical-free, and produces no harmful fumes or odors. It uses only UV light to attract insects and a high-voltage grid to zap them. Keep it out of reach of very young children who might touch the grid when it's on.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How long does the battery last on a full charge?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>The built-in 4000mAh battery lasts 10–15 hours depending on usage mode (continuous vs. intermittent). You can recharge it via any USB charger or power bank.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Does it really work in Nigeria's humid weather?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes – it has IP54 water-resistant rating, so it handles humidity, light rain, and outdoor use well. Many customers use it successfully in backyards and compounds across Lagos, Port Harcourt, and other humid areas.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Which areas do you deliver to?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We currently offer fast delivery (2–5 days) to: Lagos, Abuja (FCT), Akwa Ibom, Ogun, and Port Harcourt (Rivers State). We plan to expand soon!</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is there a warranty or return policy?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes – 7-day money-back guarantee if the product is faulty or doesn't work as described. We also offer 6-month warranty against manufacturing defects. Contact us via WhatsApp after delivery if any issue arises.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I use it during power outage?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely – it's battery-powered and doesn't need constant electricity once charged. Perfect for areas with frequent NEPA issues.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order-form" id="orderFormSection">
+      <div class="order-header">
+        <h2>Place Your Order Now</h2>
+        <p class="order-subtitle">Delivery in 2-5 Days • Free Shipping on 2+ Units</p>
+      </div>
+      
+      <div class="order-container">
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          
+          <div class="quantity-selector">
+            <label for="quantity">Select Quantity:</label>
+            <div class="quantity-buttons">
+              <button class="qty-btn" data-qty="1">1 Lamp – ₦35,000</button>
+              <button class="qty-btn active" data-qty="2">2 Lamps – ₦68,000 <span class="save-badge">Save ₦2,000</span></button>
+              <button class="qty-btn" data-qty="3">3 Lamps – ₦99,000 <span class="save-badge best-deal">Save ₦6,000</span></button>
+            </div>
+          </div>
+          
+          <div class="price-breakdown">
+            <div class="price-row">
+              <span>Product Price</span>
+              <span id="product-price">₦68,000</span>
+            </div>
+            <div class="price-row">
+              <span>Shipping</span>
+              <span id="shipping-price">₦0</span>
+            </div>
+            <div class="price-row total">
+              <span>Total Amount</span>
+              <span id="total-price">₦68,000</span>
+            </div>
+          </div>
+          
+          <div class="delivery-info">
+            <h4><i class="fas fa-truck"></i> Delivery Information</h4>
+            <p>We deliver to: Lagos, Abuja, Akwa Ibom, Ogun, Port Harcourt</p>
+            <p>Delivery time: 2-5 business days</p>
+            <p>Payment: Pay on delivery available</p>
+          </div>
+        </div>
+        
+        <div class="order-details">
+          <h3>Shipping Details</h3>
+          <form id="orderForm">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number (WhatsApp preferred)</label>
+              <input type="tel" id="phone" placeholder="0803 123 4567" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address (Optional)</label>
+              <input type="email" id="email" placeholder="you@example.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="state">Delivery State</label>
+              <select id="state" required>
+                <option value="">Select State</option>
+                <option value="Lagos">Lagos</option>
+                <option value="Abuja">Abuja (FCT)</option>
+                <option value="Akwa Ibom">Akwa Ibom</option>
+                <option value="Ogun">Ogun</option>
+                <option value="Port Harcourt">Port Harcourt (Rivers)</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="address">Full Delivery Address</label>
+              <textarea id="address" rows="3" placeholder="House number, street, area, city" required></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="instructions">Delivery Instructions (Optional)</label>
+              <textarea id="instructions" rows="2" placeholder="e.g., Call before delivery, leave with security, etc."></textarea>
+            </div>
+            
+            <div class="form-agreement">
+              <input type="checkbox" id="agree" required>
+              <label for="agree">I agree to receive order confirmation via WhatsApp/Telegram</label>
+            </div>
+            
+            <button type="submit" class="order-submit-btn">
+              <i class="fas fa-paper-plane"></i> Complete Order & Get Confirmation
+            </button>
+            
+            <p class="order-note">You'll receive order confirmation within 1 hour via WhatsApp/Telegram</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2026 Mosquito Killer Lamp NG. Fast delivery to Lagos, Abuja, Akwa Ibom, Ogun & Port Harcourt.</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-bug"></i>
+            <span>Mosquito<span class="logo-highlight">Guard</span>NG</span>
+          </div>
+          <p>Protecting Nigerian families from mosquitoes since 2023.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#orderFormSection">Order Now</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> 0803-MOSQUITO</li>
+            <li><i class="fas fa-envelope"></i> support@mosquitoguard.ng</li>
+            <li><i class="fas fa-map-marker-alt"></i> Available in 5 States</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2026 Mosquito Killer Lamp NG. Fast delivery to Lagos, Abuja, Akwa Ibom, Ogun & Port Harcourt.</p>
+        <p>This is a demo website for educational purposes.</p>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
