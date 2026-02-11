@@ -1,7 +1,6 @@
 // Dynamic total price
 function updateTotal() {
-  const qtySelect = document.getElementById('quantity');
-  const qty = parseInt(qtySelect.value);
+  const qty = parseInt(document.getElementById('quantity').value) || 1;
   const base = 35000;
   let total = qty * base;
   if (qty === 2) total -= 2000;
@@ -13,11 +12,11 @@ function updateTotal() {
 }
 
 document.getElementById('quantity').addEventListener('change', updateTotal);
-updateTotal(); // initial
+updateTotal();
 
 // Fake 24-hour countdown
 function startCountdown() {
-  let timeLeft = 24 * 60 * 60; // 24 hours
+  let timeLeft = 24 * 60 * 60;
   const timer = setInterval(() => {
     timeLeft--;
     if (timeLeft <= 0) {
@@ -35,7 +34,22 @@ function startCountdown() {
 }
 startCountdown();
 
-// Form → Telegram
+// Scroll animations
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('.fade-in-up');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
+});
+
+// Form submit to Telegram
 document.getElementById('orderForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   const status = document.getElementById('status');
