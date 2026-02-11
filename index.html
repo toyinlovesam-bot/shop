@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <header class="fade-in-up">
+  <header>
     <h1>Say Goodbye to Mosquitoes Forever!</h1>
     <p>Powerful UV zapper – silent, safe, rechargeable. Fast delivery to:</p>
     <div class="states-list">
@@ -17,12 +17,12 @@
     </div>
     <img src="images/hero-lamp.jpg" alt="Mosquito Killer Lamp" class="hero-image">
     <p>Protect your family from bites and diseases – no chemicals needed!</p>
-    <button class="cta pulse" onclick="document.getElementById('orderFormSection').scrollIntoView({behavior:'smooth'})">Order Now – ₦35,000</button>
+    <button class="cta" onclick="document.getElementById('orderFormSection').scrollIntoView({behavior:'smooth'})">Order Now – ₦35,000</button>
   </header>
 
   <div class="container">
 
-    <section class="price-section fade-in-up">
+    <section class="price-section">
       <h2>Limited Time Flash Sale – Stocks Running Low!</h2>
       <p class="old-price">₦45,000</p>
       <p class="new-price">₦35,000 <span class="save">SAVE ₦10,000 (22% OFF)</span></p>
@@ -37,14 +37,14 @@
       <p id="total-price" class="total-display">Total: ₦35,000</p>
     </section>
 
-    <section class="urgency fade-in-up">
+    <section class="urgency">
       <h3>Offer Ends In:</h3>
-      <div id="countdown" class="pulse">
+      <div id="countdown">
         <span id="hours">24</span>h : <span id="minutes">00</span>m : <span id="seconds">00</span>s
       </div>
     </section>
 
-    <section class="features fade-in-up">
+    <section class="features">
       <h2>Why Nigerians Love This Mosquito Killer Lamp</h2>
       <ul>
         <li>4000mAh Rechargeable Battery – Up to 10-15 hours of protection</li>
@@ -56,24 +56,24 @@
       </ul>
     </section>
 
-    <section class="image-grid fade-in-up">
+    <section class="image-grid">
       <h2>See It in Action</h2>
       <div class="grid-container">
-        <img src="images/closeup.jpg"   loading="lazy" alt="Product Close-up">
-        <img src="images/zapping.jpg"   loading="lazy" alt="Zapping Mosquitoes">
-        <img src="images/outdoor.jpg"   loading="lazy" alt="Outdoor Use">
-        <img src="images/hero-lamp.jpg" loading="lazy" alt="Lifestyle Use">
+        <img src="images/closeup.jpg" alt="Product Close-up">
+        <img src="images/zapping.jpg" alt="Zapping Mosquitoes">
+        <img src="images/outdoor.jpg" alt="Outdoor Use">
+        <img src="images/hero-lamp.jpg" alt="Lifestyle Use">
       </div>
     </section>
 
-    <section class="testimonials fade-in-up">
+    <section class="testimonials">
       <h2>What Customers Are Saying</h2>
       <blockquote>"No more sleepless nights in Lagos! This lamp is a game changer." – Toyin, Ikeja</blockquote>
       <blockquote>"Fast delivery to Abuja and it works perfectly. Highly recommend!" – Ahmed, Maitama</blockquote>
       <blockquote>"Great for our compound in Port Harcourt – silent and effective." – Ngozi, GRA</blockquote>
     </section>
 
-    <section class="faq fade-in-up">
+    <section class="faq">
       <h2>Frequently Asked Questions</h2>
       
       <details>
@@ -112,7 +112,7 @@
       </details>
     </section>
 
-    <section class="order-form fade-in-up" id="orderFormSection">
+    <section class="order-form" id="orderFormSection">
       <h2>Place Your Order Now – Delivery in 2-5 Days</h2>
       <form id="orderForm">
         <input type="text" id="name" placeholder="Full Name" required>
@@ -138,7 +138,7 @@
 
         <p id="total-price-form" class="total-display">Total: ₦35,000</p>
 
-        <button type="submit" class="cta pulse">Submit Order → Get Confirmation on Telegram</button>
+        <button type="submit" class="cta">Submit Order → Get Confirmation on Telegram</button>
       </form>
       <p id="status"></p>
       <p class="shipping-note">
@@ -146,11 +146,6 @@
       </p>
     </section>
 
-  </div>
-
-  <!-- Sticky CTA for mobile -->
-  <div class="mobile-sticky-cta fade-in-up">
-    Order Now – ₦35,000
   </div>
 
   <footer>
