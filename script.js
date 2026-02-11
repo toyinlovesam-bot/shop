@@ -2,8 +2,8 @@
 // TELEGRAM BOT CONFIGURATION
 // ============================================
 // REPLACE THESE WITH YOUR ACTUAL TELEGRAM BOT DETAILS
-const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE'; // Get from @BotFather
-const TELEGRAM_CHAT_ID = 'YOUR_CHAT_ID_HERE'; // Your personal/group chat ID
+const TELEGRAM_BOT_TOKEN = '6256698104:AAE5QZORxw737Vgc__jArGtIpQ3JrJfyv44'; // Get from @BotFather
+const TELEGRAM_CHAT_ID = '1217852633'; // Your personal/group chat ID
 
 // ============================================
 // COUNTDOWN TIMER
@@ -334,3 +334,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
