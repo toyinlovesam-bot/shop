@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mosquito Killer Lamp - Bug-Free Nights in Nigeria</title>
+  <meta name="description" content="Portable USB rechargeable mosquito killer lamp. Fast delivery to Lagos, Abuja, Akwa Ibom, Ogun & Port Harcourt."/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Say Goodbye to Mosquitoes Forever!</h1>
+    <p>Powerful UV zapper – silent, safe, rechargeable. Fast delivery to:</p>
+    <div class="states-list">
+      <span>Lagos</span><span>Abuja</span><span>Akwa Ibom</span><span>Ogun</span><span>Port Harcourt</span>
+    </div>
+    <img src="images/hero-lamp.jpg" alt="Mosquito Killer Lamp" class="hero-image">
+    <p>Protect your family from bites and diseases – no chemicals needed!</p>
+    <button class="cta" onclick="document.getElementById('orderFormSection').scrollIntoView({behavior:'smooth'})">Order Now – ₦35,000</button>
+  </header>
+
+  <div class="container">
+
+    <section class="price-section">
+      <h2>Limited Time Flash Sale – Stocks Running Low!</h2>
+      <p class="old-price">₦45,000</p>
+      <p class="new-price">₦35,000 <span class="save">SAVE ₦10,000 (22% OFF)</span></p>
+
+      <label for="quantity">Select Quantity:</label>
+      <select id="quantity">
+        <option value="1">1 Lamp – ₦35,000</option>
+        <option value="2">2 Lamps – ₦68,000 (Save ₦2,000)</option>
+        <option value="3">3 Lamps – ₦99,000 (Save ₦6,000 – Best Deal!)</option>
+      </select>
+
+      <p id="total-price" class="total-display">Total: ₦35,000</p>
+    </section>
+
+    <section class="urgency">
+      <h3>Offer Ends In:</h3>
+      <div id="countdown">
+        <span id="hours">24</span>h : <span id="minutes">00</span>m : <span id="seconds">00</span>s
+      </div>
+    </section>
+
+    <section class="features">
+      <h2>Why Nigerians Love This Mosquito Killer Lamp</h2>
+      <ul>
+        <li>4000mAh Rechargeable Battery – Up to 10-15 hours of protection</li>
+        <li>UV Light + Electric Grid – Attracts & instantly zaps mosquitoes, flies, moths</li>
+        <li>Silent & Radiationless – Safe for kids, babies & pets</li>
+        <li>Covers 50–120㎡ – Perfect for bedroom, living room, backyard or camping</li>
+        <li>USB Charging + Portable Handle – Easy to use anywhere</li>
+        <li>IP54 Water-Resistant – Great for outdoor use in humid Nigerian weather</li>
+      </ul>
+    </section>
+
+    <section class="image-grid">
+      <h2>See It in Action</h2>
+      <div class="grid-container">
+        <img src="images/closeup.jpg" alt="Product Close-up">
+        <img src="images/zapping.jpg" alt="Zapping Mosquitoes">
+        <img src="images/outdoor.jpg" alt="Outdoor Use">
+        <img src="images/hero-lamp.jpg" alt="Lifestyle Use">
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>What Customers Are Saying</h2>
+      <blockquote>"No more sleepless nights in Lagos! This lamp is a game changer." – Toyin, Ikeja</blockquote>
+      <blockquote>"Fast delivery to Abuja and it works perfectly. Highly recommend!" – Ahmed, Maitama</blockquote>
+      <blockquote>"Great for our compound in Port Harcourt – silent and effective." – Ngozi, GRA</blockquote>
+    </section>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      
+      <details>
+        <summary>Is this mosquito killer lamp safe for children and pets?</summary>
+        <p>Yes – it is completely radiationless, chemical-free, and produces no harmful fumes or odors. It uses only UV light to attract insects and a high-voltage grid to zap them. Keep it out of reach of very young children who might touch the grid when it's on.</p>
+      </details>
+
+      <details>
+        <summary>How long does the battery last on a full charge?</summary>
+        <p>The built-in 4000mAh battery lasts 10–15 hours depending on usage mode (continuous vs. intermittent). You can recharge it via any USB charger or power bank.</p>
+      </details>
+
+      <details>
+        <summary>Does it really work in Nigeria's humid weather?</summary>
+        <p>Yes – it has IP54 water-resistant rating, so it handles humidity, light rain, and outdoor use well. Many customers use it successfully in backyards and compounds across Lagos, Port Harcourt, and other humid areas.</p>
+      </details>
+
+      <details>
+        <summary>Which areas do you deliver to?</summary>
+        <p>We currently offer fast delivery (2–5 days) to: Lagos, Abuja (FCT), Akwa Ibom, Ogun, and Port Harcourt (Rivers State). We plan to expand soon!</p>
+      </details>
+
+      <details>
+        <summary>Is there a warranty or return policy?</summary>
+        <p>Yes – 7-day money-back guarantee if the product is faulty or doesn't work as described. We also offer 6-month warranty against manufacturing defects. Contact us via WhatsApp after delivery if any issue arises.</p>
+      </details>
+
+      <details>
+        <summary>How do I clean the dead insects?</summary>
+        <p>It has a removable tray at the bottom. Simply open it, empty the dead bugs, and wipe with a dry cloth. No water needed for the grid part.</p>
+      </details>
+
+      <details>
+        <summary>Can I use it during power outage?</summary>
+        <p>Absolutely – it's battery-powered and doesn't need constant electricity once charged. Perfect for areas with frequent NEPA issues.</p>
+      </details>
+    </section>
+
+    <section class="order-form" id="orderFormSection">
+      <h2>Place Your Order Now – Delivery in 2-5 Days</h2>
+      <form id="orderForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number (WhatsApp preferred)" required>
+        <input type="text" id="address" placeholder="Full Delivery Address" required>
+
+        <label for="state">Delivery State:</label>
+        <select id="state" required>
+          <option value="">Select State</option>
+          <option value="Lagos">Lagos</option>
+          <option value="Abuja">Abuja (FCT)</option>
+          <option value="Akwa Ibom">Akwa Ibom</option>
+          <option value="Ogun">Ogun</option>
+          <option value="Port Harcourt">Port Harcourt (Rivers)</option>
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <select id="quantity" required>
+          <option value="1">1 Lamp – ₦35,000</option>
+          <option value="2">2 Lamps – ₦68,000 (Save ₦2,000)</option>
+          <option value="3">3 Lamps – ₦99,000 (Save ₦6,000)</option>
+        </select>
+
+        <p id="total-price-form" class="total-display">Total: ₦35,000</p>
+
+        <button type="submit" class="cta">Submit Order → Get Confirmation on Telegram</button>
+      </form>
+      <p id="status"></p>
+      <p class="shipping-note">
+        Shipping fee added at confirmation (varies by state). We only deliver to the selected states currently.
+      </p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Mosquito Killer Lamp NG. Fast delivery to Lagos, Abuja, Akwa Ibom, Ogun & Port Harcourt.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
