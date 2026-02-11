@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Confirmed! 🎉 - Mosquito Killer Lamp Nigeria</title>
+  <meta name="description" content="Thank you for your order! Your mosquito killer lamp will be delivered within 2-5 days. Our agent will contact you within 24 hours."/>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Thank You Page Specific Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Animated background */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"/><circle cx="50" cy="50" r="20" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"/></svg>');
+      background-size: 100px 100px;
+      animation: floatBackground 20s linear infinite;
+      opacity: 0.3;
+    }
+
+    @keyframes floatBackground {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .thank-you-card {
+      max-width: 800px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 30px;
+      padding: 3rem;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 10;
+      animation: slideInUp 0.8s ease-out;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Success Animation */
+    .success-animation {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .checkmark-circle {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, #28a745, #20c997);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      animation: scaleIn 0.5s ease-out, pulse 2s infinite;
+    }
+
+    @keyframes scaleIn {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
+    .checkmark-circle i {
+      font-size: 4rem;
+      color: white;
+      animation: checkmarkSpin 0.8s ease-out;
+    }
+
+    @keyframes checkmarkSpin {
+      0% {
+        transform: scale(0) rotate(-180deg);
+      }
+      100% {
+        transform: scale(1) rotate(0deg);
+      }
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #28a745;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .order-subtitle {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    /* Order Details Card */
+    .order-details-card {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 20px;
+      padding: 2rem;
+      margin: 2rem 0;
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .order-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px dashed #0066cc;
+    }
+
+    .order-header i {
+      font-size: 2rem;
+      color: #0066cc;
+    }
+
+    .order-header h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #333;
+      margin: 0;
+    }
+
+    .order-id-container {
+      background: white;
+      padding: 1.2rem;
+      border-radius: 15px;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      border: 2px solid #0066cc;
+      box-shadow: 0 5px 0 #0066cc;
+    }
+
+    .order-id-label {
+      font-size: 0.9rem;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+    }
+
+    .order-id-value {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #0066cc;
+      font-family: monospace;
+      letter-spacing: 2px;
+    }
+
+    .order-info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-item {
+      background: white;
+      padding: 1rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-label {
+      font-size: 0.8rem;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.3rem;
+    }
+
+    .info-value {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .total-amount {
+      background: linear-gradient(135deg, #0066cc, #004080);
+      color: white;
+      padding: 1.2rem;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    .total-amount span:first-child {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .total-amount span:last-child {
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+
+    /* Agent Contact Section */
+    .agent-section {
+      background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+      border-radius: 20px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+      border: 1px solid #ff9800;
+    }
+
+    .agent-avatar {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #ff9800, #f57c00);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      border: 4px solid white;
+      box-shadow: 0 10px 20px rgba(255,152,0,0.3);
+    }
+
+    .agent-avatar i {
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    .agent-section h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #e65100;
+      margin-bottom: 0.5rem;
+    }
+
+    .agent-message {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 1rem 0;
+      font-style: italic;
+      color: #555;
+      position: relative;
+    }
+
+    .agent-message::before {
+      content: '"';
+      font-size: 3rem;
+      color: #ff9800;
+      opacity: 0.3;
+      position: absolute;
+      top: -10px;
+      left: 10px;
+    }
+
+    .agent-timeline {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1.5rem;
+    }
+
+    .timeline-item {
+      text-align: center;
+    }
+
+    .timeline-icon {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.5rem;
+      color: #ff9800;
+      font-size: 1.2rem;
+    }
+
+    .timeline-text {
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    .timeline-text strong {
+      display: block;
+      color: #333;
+      font-size: 0.9rem;
+    }
+
+    /* Social Media Buttons */
+    .social-section {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .social-title {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .social-title::before,
+    .social-title::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 30px;
+      height: 2px;
+      background: #ddd;
+    }
+
+    .social-title::before {
+      left: -40px;
+    }
+
+    .social-title::after {
+      right: -40px;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s ease;
+      min-width: 180px;
+    }
+
+    .social-btn i {
+      font-size: 1.3rem;
+    }
+
+    .social-btn.whatsapp {
+      background: #25D366;
+      box-shadow: 0 5px 0 #128C7E;
+    }
+
+    .social-btn.telegram {
+      background: #0088cc;
+      box-shadow: 0 5px 0 #006699;
+    }
+
+    .social-btn.facebook {
+      background: #4267B2;
+      box-shadow: 0 5px 0 #2f4a7a;
+    }
+
+    .social-btn.instagram {
+      background: linear-gradient(45deg, #f09433, #d62976, #962fbf, #4f5bd5);
+      box-shadow: 0 5px 0 #833ab4;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Action Buttons */
+    .action-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 1rem;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0066cc, #004080);
+      color: white;
+      box-shadow: 0 5px 0 #003366;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #0066cc;
+      border: 2px solid #0066cc;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,102,204,0.3);
+    }
+
+    .btn-secondary:hover {
+      background: #f0f7ff;
+      transform: translateY(-3px);
+    }
+
+    /* Loading State */
+    .loading-skeleton {
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+
+      .thank-you-card {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .order-info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .social-buttons {
+        flex-direction: column;
+      }
+
+      .social-btn {
+        width: 100%;
+      }
+
+      .action-buttons {
+        flex-direction: column;
+      }
+
+      .agent-timeline {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .timeline-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .timeline-icon {
+        margin: 0;
+      }
+
+      .order-id-value {
+        font-size: 1.4rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .thank-you-card {
+        padding: 1.5rem 1rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .checkmark-circle {
+        width: 80px;
+        height: 80px;
+      }
+
+      .checkmark-circle i {
+        font-size: 2.5rem;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: white;
+      }
+
+      .thank-you-card {
+        box-shadow: none;
+      }
+
+      .social-section,
+      .action-buttons,
+      .agent-section {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="thank-you-card">
+    <!-- Success Animation -->
+    <div class="success-animation">
+      <div class="checkmark-circle">
+        <i class="fas fa-check"></i>
+      </div>
+      <h1>Order Confirmed! 🎉</h1>
+      <p class="order-subtitle">
+        Thank you for choosing MosquitoGuard NG. Your order has been received and is being processed.
+      </p>
+    </div>
+
+    <!-- Order Details Card -->
+    <div class="order-details-card" id="orderDetailsCard">
+      <div class="order-header">
+        <i class="fas fa-file-invoice"></i>
+        <h3>Your Order Summary</h3>
+      </div>
+
+      <!-- Order ID - Dynamic -->
+      <div class="order-id-container">
+        <div class="order-id-label">Order Reference Number</div>
+        <div class="order-id-value" id="orderRef">MG-XXXXXXXX-XXX</div>
+        <p style="font-size: 0.8rem; color: #666; margin-top: 0.5rem;">
+          Please save this order ID for future reference
+        </p>
+      </div>
+
+      <!-- Customer & Order Details Grid -->
+      <div class="order-info-grid">
+        <div class="info-item">
+          <span class="info-label">Customer Name</span>
+          <span class="info-value" id="customerName">Loading...</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Phone Number</span>
+          <span class="info-value" id="customerPhone">Loading...</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Quantity</span>
+          <span class="info-value" id="orderQuantity">Loading...</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Delivery Location</span>
+          <span class="info-value" id="orderState">Loading...</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Delivery Time</span>
+          <span class="info-value">2-5 Business Days</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Payment Method</span>
+          <span class="info-value">Pay on Delivery</span>
+        </div>
+      </div>
+
+      <!-- Total Amount -->
+      <div class="total-amount">
+        <span>Total Amount to Pay:</span>
+        <span id="orderTotal">₦68,000</span>
+      </div>
+    </div>
+
+    <!-- Agent Contact Section -->
+    <div class="agent-section">
+      <div class="agent-avatar">
+        <i class="fas fa-user-headset"></i>
+      </div>
+      <h4>Our Agent Will Contact You Within 24 Hours! 📞</h4>
+      
+      <div class="agent-message">
+        <p>
+          <strong>Hello <span id="customerFirstName">Valued Customer</span>!</strong><br>
+          I'm <strong>Blessing</strong> from MosquitoGuard NG customer care. I've received your order 
+          and will reach out within 24 hours to confirm delivery details. Please have your phone handy!
+        </p>
+      </div>
+
+      <!-- Contact Timeline -->
+      <div class="agent-timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="timeline-text">
+            <strong>Step 1</strong>
+            Order Received
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="timeline-text">
+            <strong>Step 2</strong>
+            Agent Calls (24hrs)
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <div class="timeline-text">
+            <strong>Step 3</strong>
+            Delivery (2-5 days)
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-smile"></i>
+          </div>
+          <div class="timeline-text">
+            <strong>Step 4</strong>
+            Enjoy Bug-Free!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Media Contact Section -->
+    <div class="social-section">
+      <div class="social-title">
+        <i class="fas fa-share-alt"></i> Contact Us Instantly
+      </div>
+      <p style="color: #666; margin-bottom: 1.5rem;">
+        Get faster response by reaching out directly on these platforms:
+      </p>
+      
+      <div class="social-buttons">
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/2348123456789?text=Hello!%20I%20just%20placed%20an%20order%20for%20Mosquito%20Killer%20Lamp.%20Order%20ID:%20" 
+           class="social-btn whatsapp" 
+           id="whatsappBtn"
+           target="_blank">
+          <i class="fab fa-whatsapp"></i>
+          WhatsApp Agent
+        </a>
+
+        <!-- Telegram Button -->
+        <a href="https://t.me/mosquitoguard_ng" 
+           class="social-btn telegram" 
+           target="_blank">
+          <i class="fab fa-telegram-plane"></i>
+          Telegram Support
+        </a>
+
+        <!-- Facebook Button -->
+        <a href="https://facebook.com/mosquitoguardng" 
+           class="social-btn facebook" 
+           target="_blank">
+          <i class="fab fa-facebook-f"></i>
+          Facebook Page
+        </a>
+
+        <!-- Instagram Button -->
+        <a href="https://instagram.com/mosquitoguardng" 
+           class="social-btn instagram" 
+           target="_blank">
+          <i class="fab fa-instagram"></i>
+          Instagram DM
+        </a>
+      </div>
+
+      <!-- Alternative Contact Info -->
+      <div style="margin-top: 1.5rem; padding: 1rem; background: #f8f9fa; border-radius: 10px;">
+        <p style="margin-bottom: 0.5rem; color: #666;">
+          <i class="fas fa-phone-alt" style="color: #0066cc;"></i> 
+          Call/WhatsApp: <strong>+234 812 345 6789</strong>
+        </p>
+        <p style="margin-bottom: 0; color: #666;">
+          <i class="fas fa-envelope" style="color: #0066cc;"></i> 
+          Email: <strong>support@mosquitoguard.ng</strong>
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #28a745;">
+          <i class="fas fa-clock"></i> Response time: Within 30 mins on WhatsApp/Telegram
+        </p>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <a href="index.html" class="btn btn-primary">
+        <i class="fas fa-home"></i> Back to Home
+      </a>
+      <a href="#" onclick="window.print(); return false;" class="btn btn-secondary">
+        <i class="fas fa-print"></i> Print Order
+      </a>
+    </div>
+
+    <!-- Footer Note -->
+    <p style="text-align: center; margin-top: 2rem; color: #999; font-size: 0.8rem;">
+      <i class="fas fa-shield-alt"></i> Your order is protected by our 7-day money-back guarantee<br>
+      © 2026 MosquitoGuard NG. All rights reserved.
+    </p>
+  </div>
+
+  <script>
+    // ============================================
+    // LOAD ORDER DATA FROM LOCALSTORAGE AND URL
+    // ============================================
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get order ID from URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlOrderId = urlParams.get('order');
+      
+      // Get last order from localStorage
+      const lastOrder = localStorage.getItem('lastOrder');
+      let orderData = null;
+      
+      if (lastOrder) {
+        orderData = JSON.parse(lastOrder);
+      }
+      
+      // Also check order history for more details
+      const orderHistory = JSON.parse(localStorage.getItem('orderHistory') || '[]');
+      
+      // Find order by ID from URL or use last order
+      let order = null;
+      
+      if (urlOrderId) {
+        order = orderHistory.find(o => o.orderId === urlOrderId);
+      }
+      
+      if (!order && orderData) {
+        order = orderData;
+      }
+      
+      if (order) {
+        // Update order reference
+        const orderRefElement = document.getElementById('orderRef');
+        if (orderRefElement) {
+          orderRefElement.textContent = order.orderId || 'MG-' + Date.now().toString().slice(-8);
+        }
+        
+        // Update customer name
+        const customerNameElement = document.getElementById('customerName');
+        if (customerNameElement) {
+          customerNameElement.textContent = order.name || 'Not specified';
+        }
+        
+        // Update customer first name for personalized greeting
+        const customerFirstNameElement = document.getElementById('customerFirstName');
+        if (customerFirstNameElement) {
+          const firstName = order.name ? order.name.split(' ')[0] : 'Valued Customer';
+          customerFirstNameElement.textContent = firstName;
+        }
+        
+        // Update phone number
+        const customerPhoneElement = document.getElementById('customerPhone');
+        if (customerPhoneElement) {
+          customerPhoneElement.textContent = order.phone || 'Not specified';
+        }
+        
+        // Update quantity
+        const orderQuantityElement = document.getElementById('orderQuantity');
+        if (orderQuantityElement) {
+          const quantity = order.quantity || 2;
+          orderQuantityElement.textContent = `${quantity} ${quantity > 1 ? 'Lamps' : 'Lamp'}`;
+        }
+        
+        // Update state
+        const orderStateElement = document.getElementById('orderState');
+        if (orderStateElement) {
+          orderStateElement.textContent = order.state || 'Lagos';
+        }
+        
+        // Update total amount
+        const orderTotalElement = document.getElementById('orderTotal');
+        if (orderTotalElement) {
+          const total = order.totalAmount || 68000;
+          orderTotalElement.textContent = `₦${total.toLocaleString()}`;
+        }
+        
+        // Update WhatsApp button with order ID
+        const whatsappBtn = document.getElementById('whatsappBtn');
+        if (whatsappBtn) {
+          const orderId = order.orderId || 'MG-' + Date.now().toString().slice(-8);
+          whatsappBtn.href = `https://wa.me/2348123456789?text=Hello!%20I%20just%20placed%20an%20order%20for%20Mosquito%20Killer%20Lamp.%20My%20Order%20ID:%20${orderId}%0A%0AName:%20${encodeURIComponent(order.name || '')}%0APhone:%20${encodeURIComponent(order.phone || '')}`;
+        }
+        
+        // Update Telegram button
+        const telegramBtn = document.querySelector('.social-btn.telegram');
+        if (telegramBtn) {
+          const orderId = order.orderId || 'MG-' + Date.now().toString().slice(-8);
+          telegramBtn.href = `https://t.me/mosquitoguard_ng?text=Order%20ID:%20${orderId}%0AName:%20${encodeURIComponent(order.name || '')}`;
+        }
+      } else {
+        // Fallback mock data for demo
+        const mockOrderId = 'MG-' + Date.now().toString().slice(-8) + '-123';
+        
+        document.getElementById('orderRef').textContent = mockOrderId;
+        document.getElementById('customerName').textContent = 'Demo Customer';
+        document.getElementById('customerFirstName').textContent = 'Demo';
+        document.getElementById('customerPhone').textContent = '0803 123 4567';
+        document.getElementById('orderQuantity').textContent = '2 Lamps';
+        document.getElementById('orderState').textContent = 'Lagos';
+        document.getElementById('orderTotal').textContent = '₦68,000';
+        
+        const whatsappBtn = document.getElementById('whatsappBtn');
+        if (whatsappBtn) {
+          whatsappBtn.href = `https://wa.me/2348123456789?text=Hello!%20I%20just%20placed%20an%20order%20for%20Mosquito%20Killer%20Lamp.%20My%20Order%20ID:%20${mockOrderId}`;
+        }
+      }
+      
+      // Clear localStorage after displaying (optional - uncomment if you want to clear)
+      // localStorage.removeItem('lastOrder');
+      
+      // Add animation to order card
+      const orderCard = document.querySelector('.order-details-card');
+      if (orderCard) {
+        orderCard.classList.add('fade-in');
+      }
+    });
+
+    // ============================================
+    // PRINT ORDER CONFIRMATION
+    // ============================================
+    function printOrderConfirmation() {
+      window.print();
+    }
+
+    // ============================================
+    // COPY ORDER ID TO CLIPBOARD
+    // ============================================
+    function copyOrderId() {
+      const orderIdElement = document.getElementById('orderRef');
+      if (orderIdElement) {
+        const orderId = orderIdElement.textContent;
+        navigator.clipboard.writeText(orderId).then(() => {
+          alert('Order ID copied to clipboard!');
+        }).catch(err => {
+          console.error('Failed to copy:', err);
+        });
+      }
+    }
+
+    // ============================================
+    // ADD COPY BUTTON TO ORDER ID
+    // ============================================
+    function addCopyButton() {
+      const orderIdContainer = document.querySelector('.order-id-container');
+      if (orderIdContainer) {
+        const copyBtn = document.createElement('button');
+        copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+        copyBtn.style.cssText = `
+          background: #0066cc;
+          color: white;
+          border: none;
+          padding: 5px 15px;
+          border-radius: 20px;
+          font-size: 0.8rem;
+          margin-top: 10px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        `;
+        copyBtn.onclick = copyOrderId;
+        copyBtn.onmouseover = () => {
+          copyBtn.style.background = '#004080';
+        };
+        copyBtn.onmouseout = () => {
+          copyBtn.style.background = '#0066cc';
+        };
+        orderIdContainer.appendChild(copyBtn);
+      }
+    }
+
+    // Initialize copy button
+    setTimeout(addCopyButton, 500);
+  </script>
+</body>
+</html>
